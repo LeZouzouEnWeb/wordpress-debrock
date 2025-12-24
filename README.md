@@ -42,9 +42,9 @@ composer install
 
 ### 5. Accéder au site
 
-- **Site WordPress** : http://localhost:8080
-- **Admin WordPress** : http://localhost:8080/wp/wp-admin
-- **Adminer (base de données)** : http://localhost:5088
+- **Site WordPress** : <http://localhost:8080>
+- **Admin WordPress** : <http://localhost:8080/wp/wp-admin>
+- **Adminer (base de données)** : <http://localhost:5088>
 
 ## 🗄️ Configuration de la base de données
 
