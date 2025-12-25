@@ -16,6 +16,7 @@ web/.htaccess
 .env
 .env.*
 !.env.example
+!.env.*.example
 
 # Composer
 /vendor
@@ -61,7 +62,7 @@ Thumbs.db
 
 # Database
 database/*
-!database/.withgit
+!database/.gitkeep
 !database/sql
 *.sql
 *.sqlite
