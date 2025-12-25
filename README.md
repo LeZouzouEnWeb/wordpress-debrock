@@ -15,7 +15,6 @@ Projet WordPress moderne utilisant [Bedrock](https://roots.io/bedrock/) pour une
 
 ```bash
 composer create-project roots/bedrock ./wp_debrock
-cd wp_debrock
 ```
 
 ### 2. Configuration de l'environnement
@@ -37,7 +36,7 @@ docker-compose up -d
 ### 4. Installer les dépendances
 
 ```bash
-cd bedrock
+cd wp_debrock
 composer install
 ```
 
@@ -45,7 +44,7 @@ composer install
 
 - **Site WordPress** : <http://localhost:8080>
 - **Admin WordPress** : <http://localhost:8080/wp/wp-admin>
-- **Adminer (base de données)** : <http://localhost:5088>
+- **Adminer (base de données)** : <http://localhost:8088>
 
 ## 🗄️ Configuration de la base de données
 
