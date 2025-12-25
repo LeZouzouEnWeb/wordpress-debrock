@@ -14,14 +14,15 @@ Projet WordPress moderne utilisant [Bedrock](https://roots.io/bedrock/) pour une
 ### 1. Créer le projet Bedrock
 
 ```bash
-composer create-project roots/bedrock ./bedrock
+composer create-project roots/bedrock ./wp_debrock
+cd wp_debrock
 ```
 
 ### 2. Configuration de l'environnement
 
 Le fichier `.env` est déjà configuré avec :
 
-- **Base de données** : MariaDB 10.6
+- **Base de données** : MariaDB avec les paramètres par défaut
 - **Variables WordPress Bedrock** : DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
 - **Environnement** : development
 - **URLs** : WP_HOME et WP_SITEURL

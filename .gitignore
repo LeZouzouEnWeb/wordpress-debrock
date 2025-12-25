@@ -62,7 +62,7 @@ Thumbs.db
 
 # Database
 database/*
-!database/.withGit
+!database/.gitkeep
 !database/sql
 *.sql
 *.sqlite
