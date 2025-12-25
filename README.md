@@ -42,8 +42,8 @@ composer install
 
 ### 5. Accéder au site
 
-- **Site WordPress** : <http://localhost:8080>
-- **Admin WordPress** : <http://localhost:8080/wp/wp-admin>
+- **Site WordPress** : <http://localhost:8000>
+- **Admin WordPress** : <http://localhost:8000/wp/wp-admin>
 - **Adminer (base de données)** : <http://localhost:8088>
 
 ## 🗄️ Configuration de la base de données
@@ -102,6 +102,23 @@ composer require wpackagist-theme/nom-du-theme
 # Mettre à jour les dépendances
 composer update
 ```
+
+### Serveur PHP intégré (sans Docker)
+
+```bash
+# Se placer dans le dossier web
+cd wp_debrock/web
+
+# Lancer le serveur PHP sur le port 8000
+php -S localhost:8000 -t ./wp_debrock/web
+
+# Ou sur un autre port
+php -S localhost:9000 -t ./wp_debrock/web
+
+# Accéder au site : http://localhost:8000
+```
+
+> **Note** : Le serveur PHP intégré est pour le développement uniquement. Pour la production, utilisez Docker ou un serveur web classique (Apache/Nginx).
 
 ### WP-CLI (dans le conteneur Bedrock)
 
