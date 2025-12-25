@@ -57,9 +57,9 @@ composer install
 
 ## 📁 Structure du projet
 
-```
-wp_debrock/
-├── bedrock/              # Projet Bedrock
+``` Plaintext
+<Dépôt git>/
+├── wp_debrock/          # Projet Bedrock
 │   ├── web/             # Document root
 │   │   ├── app/         # Plugins, themes, uploads
 │   │   └── wp/          # WordPress core (géré par Composer)
@@ -67,7 +67,7 @@ wp_debrock/
 │   ├── vendor/          # Dépendances Composer
 │   └── .env             # Variables d'environnement
 ├── database/            # Données MariaDB persistantes
-│   └── sql/            # Scripts SQL d'initialisation
+│   └── sql/             # Scripts SQL d'initialisation
 ├── docker-compose.yml   # Configuration Docker
 └── .env                 # Variables Docker et WordPress
 ```
