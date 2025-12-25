@@ -57,7 +57,7 @@ composer install
 
 ## 📁 Structure du projet
 
-``` Plaintext
+```Plaintext
 <Dépôt git>/
 ├── wp_debrock/          # Projet Bedrock
 │   ├── web/             # Document root
@@ -119,6 +119,12 @@ php -S localhost:9000 -t ./wp_debrock/web
 ```
 
 > **Note** : Le serveur PHP intégré est pour le développement uniquement. Pour la production, utilisez Docker ou un serveur web classique (Apache/Nginx).
+>
+> **Astuce** : Vous pouvez aussi utiliser [Symfony CLI](https://symfony.com/download) pour lancer le serveur plus facilement :
+>
+> ```bash
+> symfony serve -d --port=8000
+> ```
 
 ### WP-CLI (dans le conteneur Bedrock)
 
