@@ -106,9 +106,6 @@ composer update
 ### Serveur PHP intégré (sans Docker)
 
 ```bash
-# Se placer dans le dossier web
-cd wp_debrock/web
-
 # Lancer le serveur PHP sur le port 8000
 php -S localhost:8000 -t ./wp_debrock/web
 
