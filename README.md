@@ -57,7 +57,7 @@ composer install
 
 ## 📁 Structure du projet
 
-``` Plaintext
+```Plaintext
 <Dépôt git>/
 ├── wp_debrock/          # Projet Bedrock
 │   ├── web/             # Document root
@@ -102,6 +102,29 @@ composer require wpackagist-theme/nom-du-theme
 # Mettre à jour les dépendances
 composer update
 ```
+
+### Serveur PHP intégré (sans Docker)
+
+```bash
+# Se placer dans le dossier web
+cd wp_debrock/web
+
+# Lancer le serveur PHP sur le port 8000
+php -S localhost:8000 -t ./wp_debrock/web
+
+# Ou sur un autre port
+php -S localhost:9000 -t ./wp_debrock/web
+
+# Accéder au site : http://localhost:8000
+```
+
+> **Note** : Le serveur PHP intégré est pour le développement uniquement. Pour la production, utilisez Docker ou un serveur web classique (Apache/Nginx).
+>
+> **Astuce** : Vous pouvez aussi utiliser [Symfony CLI](https://symfony.com/download) pour lancer le serveur plus facilement :
+>
+> ```bash
+> symfony serve -d --port=8000
+> ```
 
 ### WP-CLI (dans le conteneur Bedrock)
 
