@@ -4,7 +4,7 @@ services:
         platform: linux/x86_64
         container_name: adminer_${NAME}_${ADMINER_VERSION}
         image: adminer:${ADMINER_VERSION}
-        restart: unless-stopped
+        restart: no
         ports:
             - ${ADMINER_LOCALHOST_PORT}:${ADMINER_DOCKER_PORT}
         env_file:
@@ -17,7 +17,7 @@ services:
         platform: linux/x86_64
         container_name: mariadb_${NAME}_${MARIADB_VERSION}
         image: mariadb:${MARIADB_VERSION}
-        restart: unless-stopped
+        restart: no
         env_file:
             - .env
         volumes:
@@ -26,8 +26,22 @@ services:
         ports:
             - ${SQL_LOCALHOST_PORT}:${SQL_DOCKER_PORT}
 ###< doctrine/doctrine-bundle ###
-
 # ##< BASE DE DONNÉES // ADMINER ET mariadb
+
+###> MAILER // Mailpit pour capturer les emails en dev
+    mailpit:
+        platform: linux/x86_64
+        container_name: mailpit_${NAME}
+        image: axllent/mailpit:latest
+        restart: no
+        ports:
+            - ${MAILER_LOCALHOST_SMTP_PORT}:${MAILER_DOCKER_SMTP_PORT}   # Port SMTP
+            - ${MAILER_LOCALHOST_HTML_PORT}:${MAILER_DOCKER_HTML_PORT}   # Interface web
+        environment:
+            MP_MAX_MESSAGES: 5000
+            MP_SMTP_AUTH_ACCEPT_ANY: 1
+            MP_SMTP_AUTH_ALLOW_INSECURE: 1
+###< MAILER // Mailpit
 
 volumes:
 ###> doctrine/doctrine-bundle ###
