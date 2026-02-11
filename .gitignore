@@ -1,5 +1,6 @@
 # WordPress Bedrock .gitignore
 wp_debrock
+temp
 
 # Application
 web/app/plugins/*
